@@ -11,7 +11,7 @@ M.setup = function()
          formatting.prettier.with {
             filetypes = { "html", "markdown", "css", "typescript", "javascript", "json", "svelte" },
          },
-         formatting.gofmt.with { filetypes = { "go" } },
+         -- formatting.gofmt.with { filetypes = { "go" } },
          formatting.autopep8.with { filetypes = { "python" } },
          -- formatting.clang_format,
       },
