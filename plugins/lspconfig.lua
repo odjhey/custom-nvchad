@@ -1,20 +1,13 @@
-local M = {}
+-- custom.plugins.lspconfig
+local on_attach = require("plugins.configs.lspconfig").on_attach
+local capabilities = require("plugins.configs.lspconfig").capabilities
 
-M.setup_lsp = function(attach, capabilities)
-   local lspconfig = require "lspconfig"
+local lspconfig = require "lspconfig"
+local servers = { "gopls" }
 
-   -- lspservers with default config
-   local servers = { "html", "tsserver" }
-
-   for _, lsp in ipairs(servers) do
-      lspconfig[lsp].setup {
-         on_attach = attach,
-         capabilities = capabilities,
-         flags = {
-            debounce_text_changes = 150,
-         },
-      }
-   end
+for _, lsp in ipairs(servers) do
+  lspconfig[lsp].setup {
+    on_attach = on_attach,
+    capabilities = capabilities,
+  }
 end
-
-return M
