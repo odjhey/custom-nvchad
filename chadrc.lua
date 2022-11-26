@@ -7,7 +7,7 @@ local M = {}
 
 M.options = {
    user = function()
-      vim.opt.clipboard = nil
+      vim.opt.clipboard = ""
    end,
 }
 
