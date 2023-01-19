@@ -6,6 +6,28 @@ return {
   ["iamcco/markdown-preview.nvim"] = { },
   ["rest-nvim/rest.nvim"] = { },
 
+  -- some formatting
+   ["jose-elias-alvarez/null-ls.nvim"] = {
+    after = "nvim-lspconfig",
+    config = function()
+      local present, null_ls = pcall(require, "null-ls")
+
+      if not present then
+        return
+      end
+
+      local sources = {
+        -- must install https://github.com/uncrustify/uncrustify
+        null_ls.builtins.formatting.uncrustify
+      }
+
+      null_ls.setup {
+        debug = true,
+        sources = sources,
+      }
+    end,
+   },
+
   -- as suggested by lsp
   ["mfussenegger/nvim-jdtls"] = {
     ft = {'java'},
