@@ -9,6 +9,7 @@ M.treesitter = {
     "javascript",
     "typescript",
     "go",
+    "java",
   },
 }
 
@@ -24,6 +25,9 @@ M.mason = {
     "typescript-language-server",
 
     "gopls",
+
+    -- java
+    "jdtls",
   },
 }
 
