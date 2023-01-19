@@ -6,6 +6,9 @@ return {
    ["iamcco/markdown-preview.nvim"] = { },
    ["rest-nvim/rest.nvim"] = { },
 
+   -- use this till we get a teal lsp 
+   ["teal-language/vim-teal"] = { },
+
    -- overrde plugin configs
    ["neovim/nvim-lspconfig"] = {
      config = function()
