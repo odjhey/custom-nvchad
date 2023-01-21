@@ -1,0 +1,2 @@
+build:
+	moonc -l . && moonc .
