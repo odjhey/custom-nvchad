@@ -60,6 +60,7 @@ return {
 
   -- use this till we get a teal lsp 
   ["teal-language/vim-teal"] = { },
+  ["leafo/moonscript-vim"] = { },
 
   -- override plugin configs
   ["neovim/nvim-lspconfig"] = {
