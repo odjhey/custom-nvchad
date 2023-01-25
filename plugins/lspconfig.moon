@@ -5,7 +5,8 @@ capabilities = require"plugins.configs.lspconfig".capabilities
 servers = {
   "gopls"
   "sumneko_lua"
-  "tsserver"
+  "tsserver",
+  "pylsp"
 }
 
 for _, lsp in ipairs servers

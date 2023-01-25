@@ -8,7 +8,8 @@ local M = {
       "javascript",
       "typescript",
       "go",
-      "java"
+      "java",
+      "python"
     }
   },
   mason = {
@@ -19,7 +20,8 @@ local M = {
       "html-lsp",
       "typescript-language-server",
       "gopls",
-      "jdtls"
+      "jdtls",
+      "python-lsp-server"
     }
   }
 }

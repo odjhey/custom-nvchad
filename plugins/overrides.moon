@@ -9,6 +9,7 @@ M =
       "typescript"
       "go"
       "java"
+      "python"
     }
   mason:
     ensure_installed: {
@@ -25,6 +26,9 @@ M =
 
     -- java
     "jdtls"
+
+    -- python stuff
+    "python-lsp-server"
   }
 
 M

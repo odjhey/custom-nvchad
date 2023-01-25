@@ -4,7 +4,8 @@ local capabilities = require("plugins.configs.lspconfig").capabilities
 local servers = {
   "gopls",
   "sumneko_lua",
-  "tsserver"
+  "tsserver",
+  "pylsp"
 }
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup({
