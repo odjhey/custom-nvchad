@@ -4,6 +4,20 @@ return {
   ["fatih/vim-go"] = { },
   ["iamcco/markdown-preview.nvim"] = { },
   ["rest-nvim/rest.nvim"] = { },
+  ["hkupty/iron.nvim"] = {
+    config = function()
+      local present, iron = pcall(require, "iron.core")
+      if present then
+        return iron.setup({
+          config = { },
+          keymaps = {
+            send_motion = "<space>sc",
+            visual_send = "<space>sc"
+          }
+        })
+      end
+    end
+  },
   ["jose-elias-alvarez/null-ls.nvim"] = {
     after = "nvim-lspconfig",
     config = function()

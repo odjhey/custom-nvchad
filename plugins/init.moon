@@ -6,6 +6,15 @@ overrides = require "custom.plugins.overrides"
   "fatih/vim-go": { }
   "iamcco/markdown-preview.nvim": { }
   "rest-nvim/rest.nvim": { }
+  "hkupty/iron.nvim":
+    config: ->
+      present, iron = pcall require, "iron.core"
+      if present
+        iron.setup
+          config: {}
+          keymaps:
+            send_motion: "<space>sc"
+            visual_send: "<space>sc"
 
   -- some formatting
   "jose-elias-alvarez/null-ls.nvim":
