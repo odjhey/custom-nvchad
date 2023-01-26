@@ -6,6 +6,15 @@ overrides = require "custom.plugins.overrides"
   "fatih/vim-go": { }
   "iamcco/markdown-preview.nvim": { }
   "rest-nvim/rest.nvim": { }
+  "hkupty/iron.nvim":
+    config: ->
+      present, iron = pcall require, "iron.core"
+      if present
+        iron.setup
+          config: {}
+          keymaps:
+            send_motion: "<space>sc"
+            visual_send: "<space>sc"
 
   -- some formatting
   "jose-elias-alvarez/null-ls.nvim":
@@ -16,6 +25,7 @@ overrides = require "custom.plugins.overrides"
         sources = {
           -- must install https://github.com/uncrustify/uncrustify
           null_ls.builtins.formatting.uncrustify
+          null_ls.builtins.formatting.yapf
         }
         null_ls.setup
           debug: true
@@ -58,4 +68,8 @@ overrides = require "custom.plugins.overrides"
 
   "williamboman/mason.nvim":
     override_options: overrides.mason
+
+  "folke/trouble.nvim":
+    config: ->
+      require"trouble".setup
 }

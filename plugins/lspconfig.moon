@@ -6,6 +6,7 @@ servers = {
   "gopls"
   "sumneko_lua"
   "tsserver"
+  "pylsp"
 }
 
 for _, lsp in ipairs servers

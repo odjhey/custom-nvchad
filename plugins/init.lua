@@ -4,13 +4,28 @@ return {
   ["fatih/vim-go"] = { },
   ["iamcco/markdown-preview.nvim"] = { },
   ["rest-nvim/rest.nvim"] = { },
+  ["hkupty/iron.nvim"] = {
+    config = function()
+      local present, iron = pcall(require, "iron.core")
+      if present then
+        return iron.setup({
+          config = { },
+          keymaps = {
+            send_motion = "<space>sc",
+            visual_send = "<space>sc"
+          }
+        })
+      end
+    end
+  },
   ["jose-elias-alvarez/null-ls.nvim"] = {
     after = "nvim-lspconfig",
     config = function()
       local present, null_ls = pcall(require, "null-ls")
       if present then
         local sources = {
-          null_ls.builtins.formatting.uncrustify
+          null_ls.builtins.formatting.uncrustify,
+          null_ls.builtins.formatting.yapf
         }
         return null_ls.setup({
           debug = true,
@@ -64,5 +79,10 @@ return {
   },
   ["williamboman/mason.nvim"] = {
     override_options = overrides.mason
+  },
+  ["folke/trouble.nvim"] = {
+    config = function()
+      return require("trouble").setup
+    end
   }
 }
