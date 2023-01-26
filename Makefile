@@ -1,2 +1,4 @@
 build:
-	moonc -l . && moonc .
+	cd .src && \
+	moonc -l . && \
+	moonc -t .. .
