@@ -6,16 +6,14 @@ return {
   ["rest-nvim/rest.nvim"] = { },
   ["hkupty/iron.nvim"] = {
     config = function()
-      local present, iron = pcall(require, "iron.core")
-      if present then
-        return iron.setup({
-          config = { },
-          keymaps = {
-            send_motion = "<space>sc",
-            visual_send = "<space>sc"
-          }
-        })
-      end
+      local utils = require("custom.plugins.utils")
+      return utils.setup_if_exist("iron.core", {
+        config = { },
+        keymaps = {
+          send_motion = "<space>sc",
+          visual_send = "<space>sc"
+        }
+      })
     end
   },
   ["jose-elias-alvarez/null-ls.nvim"] = {
@@ -36,7 +34,7 @@ return {
   },
   ["mfussenegger/nvim-jdtls"] = {
     ft = {
-      'java'
+      "java"
     },
     config = function()
       local home = os.getenv("HOME")
@@ -45,14 +43,14 @@ return {
           home .. "/.local/share/nvim/mason/bin/jdtls"
         },
         root_dir = vim.fs.dirname(vim.fs.find({
-          '.gradlew',
-          '.git',
-          'mvnw'
+          ".gradlew",
+          ".git",
+          "mvnw"
         }, {
           upward = true
         })[1]),
         on_attach = function(client, bufnr)
-          local utils = require('core.utils')
+          local utils = require("core.utils")
           client.server_capabilities.documentFormattingProvider = false
           client.server_capabilities.documentRangeFormattingProvider = false
           utils.load_mappings("lspconfig", {
@@ -63,7 +61,7 @@ return {
           end
         end
       }
-      return require('jdtls').start_or_attach(config)
+      return require("jdtls").start_or_attach(config)
     end
   },
   ["teal-language/vim-teal"] = { },
@@ -82,7 +80,37 @@ return {
   },
   ["folke/trouble.nvim"] = {
     config = function()
-      return require("trouble").setup
+      local utils = require("custom.plugins.utils")
+      return utils.setup_if_exist("trouble")
+    end
+  },
+  ["echasnovski/mini.indentscope"] = {
+    config = function()
+      local utils = require("custom.plugins.utils")
+      return utils.setup_if_exist("mini.indentscope")
+    end
+  },
+  ["echasnovski/mini.move"] = {
+    config = function()
+      local utils = require("custom.plugins.utils")
+      return utils.setup_if_exist("mini.move", {
+        mappings = {
+          left = "<Left>",
+          right = "<Right>",
+          down = "<Down>",
+          up = "<Up>",
+          line_left = "",
+          line_right = "",
+          line_down = "",
+          line_up = ""
+        }
+      })
+    end
+  },
+  ["echasnovski/mini.ai"] = {
+    config = function()
+      local utils = require("custom.plugins.utils")
+      return utils.setup_if_exist("mini.ai")
     end
   }
 }
