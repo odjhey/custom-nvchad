@@ -29,6 +29,7 @@ M =
 
     -- python stuff
     "python-lsp-server"
+    "yapf"
   }
 
 M

@@ -21,7 +21,8 @@ local M = {
       "typescript-language-server",
       "gopls",
       "jdtls",
-      "python-lsp-server"
+      "python-lsp-server",
+      "yapf"
     }
   }
 }

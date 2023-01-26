@@ -10,7 +10,8 @@ return {
       local present, null_ls = pcall(require, "null-ls")
       if present then
         local sources = {
-          null_ls.builtins.formatting.uncrustify
+          null_ls.builtins.formatting.uncrustify,
+          null_ls.builtins.formatting.yapf
         }
         return null_ls.setup({
           debug = true,
@@ -64,5 +65,10 @@ return {
   },
   ["williamboman/mason.nvim"] = {
     override_options = overrides.mason
+  },
+  ["folke/trouble.nvim"] = {
+    config = function()
+      return require("trouble").setup
+    end
   }
 }

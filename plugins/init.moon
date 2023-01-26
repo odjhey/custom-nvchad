@@ -16,6 +16,7 @@ overrides = require "custom.plugins.overrides"
         sources = {
           -- must install https://github.com/uncrustify/uncrustify
           null_ls.builtins.formatting.uncrustify
+          null_ls.builtins.formatting.yapf
         }
         null_ls.setup
           debug: true
@@ -58,4 +59,8 @@ overrides = require "custom.plugins.overrides"
 
   "williamboman/mason.nvim":
     override_options: overrides.mason
+
+  "folke/trouble.nvim":
+    config: ->
+      require"trouble".setup
 }
