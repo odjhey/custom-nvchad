@@ -1,6 +1,22 @@
-build:
-	cd .src && \
-	moonc -l . && \
-	moonc -t .. .
+
+FENNEL = ./.bin/fennel-1.2.1-x86_64
+
+SRC_DIR = .src
+BUILD_DIR = .build
+
+SRCS = $(shell find $(SRC_DIR) -name "*.fnl")
+OBJS = $(patsubst $(SRC_DIR)/%.fnl, $(BUILD_DIR)/%.lua, $(SRCS))
+
+.PHONY: all
+all: $(OBJS)
+
+$(BUILD_DIR)/%.lua: $(SRC_DIR)/%.fnl
+	mkdir -p $(dir $@)
+	$(FENNEL) --compile $< > $@
+	mv $@ .
+
+%.lua: $(SRC_DIR)/%.fnl
+	$(FENNEL) --compile $< > $@
+
 watch:
-	.bin/filewatch.sh "make build" .src/**/*.moon
+	.bin/filewatch.sh "make all" .src/**/*.fnl
