@@ -12,8 +12,8 @@ overrides = require "custom.plugins.overrides"
       utils.setup_if_exist "iron.core",
         config: {}
         keymaps:
-          send_motion: "<space>sc"
-          visual_send: "<space>sc"
+          send_motion: "<space>ee"
+          visual_send: "<space>ee"
 
   -- some formatting
   "jose-elias-alvarez/null-ls.nvim":
