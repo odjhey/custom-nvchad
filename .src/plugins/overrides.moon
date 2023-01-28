@@ -32,7 +32,12 @@ M =
     "python-lsp-server"
     "yapf"
   }
-
+  autopairs:
+    disable_filetype: {
+      "clojure"
+      "lisp"
+      "fennel"
+    }
 M
 
 

@@ -69,6 +69,11 @@ overrides = require "custom.plugins.overrides"
   "williamboman/mason.nvim":
     override_options: overrides.mason
 
+  "windwp/nvim-autopairs":
+    override_options: overrides.autopairs
+
+  -- install plugins
+
   "folke/trouble.nvim":
     config: ->
       utils = require "custom.plugins.utils"

@@ -79,6 +79,9 @@ return {
   ["williamboman/mason.nvim"] = {
     override_options = overrides.mason
   },
+  ["windwp/nvim-autopairs"] = {
+    override_options = overrides.autopairs
+  },
   ["folke/trouble.nvim"] = {
     config = function()
       local utils = require("custom.plugins.utils")
