@@ -9,7 +9,8 @@ local M = {
       "typescript",
       "go",
       "java",
-      "python"
+      "python",
+      "fennel"
     }
   },
   mason = {

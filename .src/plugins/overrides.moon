@@ -10,6 +10,7 @@ M =
       "go"
       "java"
       "python"
+      "fennel"
     }
   mason:
     ensure_installed: {

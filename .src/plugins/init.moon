@@ -25,6 +25,7 @@ overrides = require "custom.plugins.overrides"
           -- must install https://github.com/uncrustify/uncrustify
           null_ls.builtins.formatting.uncrustify
           null_ls.builtins.formatting.yapf
+          null_ls.builtins.formatting.fnlfmt
         }
         null_ls.setup
           debug: true

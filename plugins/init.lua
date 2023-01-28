@@ -23,7 +23,8 @@ return {
       if present then
         local sources = {
           null_ls.builtins.formatting.uncrustify,
-          null_ls.builtins.formatting.yapf
+          null_ls.builtins.formatting.yapf,
+          null_ls.builtins.formatting.fnlfmt
         }
         return null_ls.setup({
           debug = true,

@@ -5,7 +5,22 @@ local servers = {
   "gopls",
   "sumneko_lua",
   "tsserver",
-  "pylsp"
+  "pylsp",
+  "fennel-ls"
+}
+require("lspconfig.configs")["fennel-ls"] = {
+  default_config = {
+    cmd = {
+      "/usr/local/bin/fennel-ls"
+    },
+    filetypes = {
+      "fennel"
+    },
+    root_dir = function(dir)
+      return lspconfig.util.find_git_ancestor(dir)
+    end,
+    settings = { }
+  }
 }
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup({
