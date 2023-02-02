@@ -1,5 +1,5 @@
 M =
-  treesetter:
+  treesitter:
     ensure_installed: {
       "vim"
       "lua"
@@ -11,6 +11,7 @@ M =
       "java"
       "python"
       "fennel"
+      "gdscript"
     }
   mason:
     ensure_installed: {
@@ -32,6 +33,7 @@ M =
     "python-lsp-server"
     "yapf"
   }
+
   autopairs:
     disable_filetype: {
       "clojure"

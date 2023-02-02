@@ -6,7 +6,8 @@ local servers = {
   "sumneko_lua",
   "tsserver",
   "pylsp",
-  "fennel-ls"
+  "fennel-ls",
+  "gdscript"
 }
 require("lspconfig.configs")["fennel-ls"] = {
   default_config = {

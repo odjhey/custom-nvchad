@@ -1,5 +1,5 @@
 local M = {
-  treesetter = {
+  treesitter = {
     ensure_installed = {
       "vim",
       "lua",
@@ -10,7 +10,8 @@ local M = {
       "go",
       "java",
       "python",
-      "fennel"
+      "fennel",
+      "gdscript"
     }
   },
   mason = {

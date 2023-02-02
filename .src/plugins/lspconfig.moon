@@ -8,6 +8,7 @@ servers = {
   "tsserver"
   "pylsp"
   "fennel-ls"
+  "gdscript"
 }
 
 -- inform lspconfig about fennel-ls
