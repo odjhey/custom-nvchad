@@ -11,7 +11,9 @@ return {
         config = { },
         keymaps = {
           send_motion = "<space>ee",
-          visual_send = "<space>ee"
+          send_file = "<space>ef",
+          visual_send = "<space>ee",
+          clear = "<space>el"
         }
       })
     end

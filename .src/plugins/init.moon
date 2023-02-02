@@ -13,7 +13,9 @@ overrides = require "custom.plugins.overrides"
         config: {}
         keymaps:
           send_motion: "<space>ee"
+          send_file: "<space>ef"
           visual_send: "<space>ee"
+          clear: "<space>el"
 
   -- some formatting
   "jose-elias-alvarez/null-ls.nvim":
