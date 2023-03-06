@@ -3,7 +3,7 @@ local on_attach = require("plugins.configs.lspconfig").on_attach
 local capabilities = require("plugins.configs.lspconfig").capabilities
 local servers = {
   "gopls",
-  "sumneko_lua",
+  "lua_ls",
   "tsserver",
   "pylsp",
   "fennel-ls",

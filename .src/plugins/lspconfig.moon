@@ -4,7 +4,7 @@ capabilities = require"plugins.configs.lspconfig".capabilities
 
 servers = {
   "gopls"
-  "sumneko_lua"
+  "lua_ls"
   "tsserver"
   "pylsp"
   "fennel-ls"
