@@ -11,7 +11,9 @@ local M = {
       "java",
       "python",
       "fennel",
-      "gdscript"
+      "gdscript",
+      "graphql",
+      "prisma"
     }
   },
   mason = {
@@ -24,7 +26,8 @@ local M = {
       "gopls",
       "jdtls",
       "python-lsp-server",
-      "yapf"
+      "yapf",
+      "prisma-language-server"
     }
   },
   autopairs = {

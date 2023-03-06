@@ -12,6 +12,8 @@ M =
       "python"
       "fennel"
       "gdscript"
+      "graphql"
+      "prisma"
     }
   mason:
     ensure_installed: {
@@ -32,6 +34,8 @@ M =
     -- python stuff
     "python-lsp-server"
     "yapf"
+
+    "prisma-language-server"
   }
 
   autopairs:
