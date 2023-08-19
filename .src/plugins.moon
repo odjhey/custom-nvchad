@@ -28,4 +28,16 @@ overrides = require "custom.configs.overrides"
     opts:
       overrides.nvimtree
   }
+  {
+    "windwp/nvim-autopairs"
+    opts:
+      overrides.autopairs
+  }
+  { "tpope/vim-surround"
+    lazy: false
+  }
+  { "iamcco/markdown-preview.nvim" }
+  { "leafo/moonscript-vim"
+    lazy: false
+  }
 }
