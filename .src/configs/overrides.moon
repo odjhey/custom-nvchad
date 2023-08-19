@@ -14,6 +14,7 @@ M =
       "gdscript"
       "graphql"
       "prisma"
+      "terraform"
     }
   mason:
     ensure_installed: {
@@ -36,6 +37,8 @@ M =
     "yapf"
 
     "prisma-language-server"
+
+    "terraform-ls"
   }
 
   nvimtree:
