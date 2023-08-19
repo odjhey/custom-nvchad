@@ -1,59 +1,56 @@
-local M = {}
-
-M.treesitter = {
-  ensure_installed = {
-    "vim",
-    "lua",
-    "html",
-    "css",
-    "javascript",
-    "typescript",
-    "tsx",
-    "c",
-    "markdown",
-    "markdown_inline",
+local M = {
+  treesitter = {
+    ensure_installed = {
+      "vim",
+      "lua",
+      "html",
+      "css",
+      "javascript",
+      "typescript",
+      "go",
+      "java",
+      "python",
+      "fennel",
+      "gdscript",
+      "graphql",
+      "prisma",
+      "terraform"
+    }
   },
-  indent = {
-    enable = true,
-    -- disable = {
-    --   "python"
-    -- },
+  mason = {
+    ensure_installed = {
+      "lua-language-server",
+      "stylua",
+      "css-lsp",
+      "html-lsp",
+      "typescript-language-server",
+      "gopls",
+      "jdtls",
+      "python-lsp-server",
+      "yapf",
+      "prisma-language-server",
+      "terraform-ls"
+    }
   },
-}
-
-M.mason = {
-  ensure_installed = {
-    -- lua stuff
-    "lua-language-server",
-    "stylua",
-
-    -- web dev stuff
-    "css-lsp",
-    "html-lsp",
-    "typescript-language-server",
-    "deno",
-    "prettier",
-
-    -- c/cpp stuff
-    "clangd",
-    "clang-format",
-  },
-}
-
--- git support in nvimtree
-M.nvimtree = {
-  git = {
-    enable = true,
-  },
-
-  renderer = {
-    highlight_git = true,
-    icons = {
-      show = {
-        git = true,
-      },
+  nvimtree = {
+    git = {
+      enable = true
     },
+    renderer = {
+      highlight_git = true,
+      icons = {
+        show = {
+          git = true
+        }
+      }
+    }
   },
+  autopairs = {
+    disable_filetype = {
+      "clojure",
+      "lisp",
+      "fennel"
+    }
+  }
 }
-
 return M

@@ -1,12 +1,35 @@
----@type MappingsTable
-local M = {}
-
-M.general = {
-  n = {
-    [";"] = { ":", "enter command mode", opts = { nowait = true } },
-  },
+local M = {
+  user = {
+    n = {
+      ["<left>"] = {
+        "<cmd> cprev <cr>",
+        ""
+      },
+      ["<right>"] = {
+        "<cmd> cnext <cr>",
+        ""
+      },
+      ["<up>"] = {
+        "<cmd> lnext <cr>",
+        ""
+      },
+      ["<down>"] = {
+        "<cmd> lprev <cr>",
+        ""
+      },
+      ["<leader><CR>"] = {
+        "<C-^>",
+        ""
+      },
+      ["<leader>h"] = {
+        "<nop>",
+        ""
+      },
+      ["<leader>v"] = {
+        "<nop>",
+        ""
+      }
+    }
+  }
 }
-
--- more keybinds!
-
 return M
