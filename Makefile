@@ -1,4 +1,5 @@
 .PHONY: build watch clean
+
 build:
 	cd .src && \
 	moonc -l . && \
@@ -6,5 +7,4 @@ build:
 watch:
 	.bin/filewatch.sh "make build" .src/**/*.moon
 clean:
-	rm *.lua
-	rm **/*.lua
+	rm $(shell find . -name "*.lua")
