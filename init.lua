@@ -1,4 +1,5 @@
 vim.opt.clipboard = ""
+vim.opt.list = true
 vim.opt.listchars = {
   tab = "→ ",
   eol = "¬",
