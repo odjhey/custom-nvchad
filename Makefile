@@ -1,4 +1,4 @@
-.PHONY: build watch clean
+.PHONY: build watch clean user-install-moon
 
 build:
 	cd .src && \
@@ -8,3 +8,5 @@ watch:
 	.bin/filewatch.sh "make build" .src/**/*.moon
 clean:
 	rm $(shell find . -name "*.lua")
+user-install-moon:
+	luarocks --local --dev install moonscript
