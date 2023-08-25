@@ -41,5 +41,9 @@ return {
   {
     "leafo/moonscript-vim",
     lazy = false
+  },
+  {
+    "adelarsq/neofsharp.vim",
+    lazy = false
   }
 }

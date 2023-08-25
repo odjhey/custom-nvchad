@@ -29,7 +29,8 @@ local M = {
       "python-lsp-server",
       "yapf",
       "prisma-language-server",
-      "terraform-ls"
+      "terraform-ls",
+      "fsautocomplete"
     }
   },
   nvimtree = {

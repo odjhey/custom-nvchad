@@ -39,6 +39,8 @@ M =
     "prisma-language-server"
 
     "terraform-ls"
+
+    "fsautocomplete"
   }
 
   nvimtree:

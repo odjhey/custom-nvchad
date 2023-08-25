@@ -40,4 +40,8 @@ overrides = require "custom.configs.overrides"
   { "leafo/moonscript-vim"
     lazy: false
   }
+
+  { "adelarsq/neofsharp.vim"
+    lazy: false
+  }
 }

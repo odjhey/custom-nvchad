@@ -10,6 +10,8 @@ servers = {
   "pylsp"
 --  "fennel-ls"
   "gdscript"
+
+  "fsautocomplete"
 }
 
 ---- inform lspconfig about fennel-ls
