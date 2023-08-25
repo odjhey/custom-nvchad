@@ -36,6 +36,9 @@ overrides = require "custom.configs.overrides"
   { "tpope/vim-surround"
     lazy: false
   }
+  { "fatih/vim-go",
+    lazy: false
+  }
   { "iamcco/markdown-preview.nvim" }
   { "leafo/moonscript-vim"
     lazy: false
